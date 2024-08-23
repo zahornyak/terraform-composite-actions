@@ -11,7 +11,7 @@ inputs:
   terraform-architecture:
     description: Terraform architecture to use when evaluating checks
     required: false
-    default: {{  inputs.terraform-architecture  }}
+    default: amd64
   tflint-version:
     description: Version of tflint to use when evaluating checks
     required: false
