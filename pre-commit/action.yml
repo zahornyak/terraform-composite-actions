@@ -44,7 +44,7 @@ runs:
       shell: bash
       run: |
         rm -rf $(which terraform)
-        curl --retry 3 --retry-all-errors --retry-delay 3 -sSO https://releases.hashicorp.com/terraform/${{ inputs.terraform-version }}/terraform_${{ inputs.terraform-version }}_linux_{{  inputs.terraform-architecture  }}.zip
+        curl --retry 3 --retry-all-errors --retry-delay 3 -sSO https://releases.hashicorp.com/terraform/${{ inputs.terraform-version }}/terraform_${{ inputs.terraform-version }}_linux_${{  inputs.terraform-architecture  }}.zip
         sudo unzip -qq terraform_${{ inputs.terraform-version }}_linux_{{  inputs.terraform-architecture  }}.zip terraform -d /usr/bin/
         rm terraform_${{ inputs.terraform-version }}_linux_{{  inputs.terraform-architecture  }}.zip 2> /dev/null
 
